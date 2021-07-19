@@ -1,16 +1,11 @@
-name = "worker"
-# type = "javascript" is required to use the `[build]` section
+name = "worker-typescript-template"
 type = "javascript"
-account_id = ""
-workers_dev = true
-route = ""
 zone_id = ""
+account_id = ""
+route = ""
+workers_dev = true
 
 [build]
 command = "npm ci --silent && npm run build"
 [build.upload]
-format = "modules"
-main = "./index.mjs"
-[[build.upload.rules]]
-type = "Text"
-globs = ["**/*.txt"]
+format = "service-worker"
