@@ -1,5 +1,3 @@
-import slug from 'slug.txt'
-
 export default {
   async fetch(request, env) {
     try {
@@ -11,5 +9,5 @@ export default {
 }
 
 async function handleRequest(request, env) {
-  return new Response(slug)
+  return new Response('This is a test')
 }
