@@ -1,7 +1,17 @@
+interface Options {
+  cf: {
+    image: {
+      fit?: string | null
+      height?: string | null
+      quality?: string | null
+      width?: string | null
+    }
+  }
+}
+
 export async function handleRequest(request: Request): Promise<Response> {
   const url = new URL(request.url)
-  const options: any = {
-    // TODO FIX!!!
+  const options: Options & RequestInit = {
     cf: {
       image: {},
     },
