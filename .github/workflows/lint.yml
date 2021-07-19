@@ -1,0 +1,17 @@
+name: Lint
+
+on: push
+
+jobs:
+  master:
+    name: Lint
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Install
+        run: npm ci
+      - name: Lint
+        run: npm run lint

@@ -1,0 +1,16 @@
+name = "worker"
+# type = "javascript" is required to use the `[build]` section
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[build]
+command = "npm install && npm run build"
+[build.upload]
+format = "modules"
+main = "./index.mjs"
+[[build.upload.rules]]
+type = "Text"
+globs = ["**/*.txt"]
