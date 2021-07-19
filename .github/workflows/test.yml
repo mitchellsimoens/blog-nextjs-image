@@ -1,0 +1,17 @@
+name: Test
+
+on: push
+
+jobs:
+  master:
+    name: Test
+    runs-on: ubuntu-latest
+    steps:
+      - name: Setup Node
+        uses: actions/setup-node@v2
+      - name: Checkout
+        uses: actions/checkout@master
+      - name: Install
+        run: npm ci
+      - name: Test
+        run: npm test

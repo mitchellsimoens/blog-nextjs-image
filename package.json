@@ -1,7 +1,7 @@
 {
-  "name": "worker-typescript-template",
+  "name": "blog-nextjs-image",
   "version": "1.0.0",
-  "description": "Cloudflare worker TypeScript template",
+  "description": "Worker to handle NextJS Image component",
   "main": "dist/worker.js",
   "scripts": {
     "build": "webpack",

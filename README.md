@@ -1,1 +1,1 @@
-# blog-workers
+# blog-nextjs-image
